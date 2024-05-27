@@ -15,7 +15,7 @@ function displayData() {
     if (data) {
         const parsedData = JSON.parse(data);
         const outputElement = document.getElementById('output');
-        outputElement.innerHTML = '';  // Clear previous data
+        outputElement.innerHTML = ''; 
         parsedData.forEach(item => {
             const div = document.createElement('div');
             div.textContent = `Class: ${item.class}`;
@@ -24,5 +24,4 @@ function displayData() {
     }
 }
 
-// Initial display if data already exists in localStorage
 document.addEventListener('DOMContentLoaded', displayData);
